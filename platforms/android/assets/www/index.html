@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File System Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/file_datamanager.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+    // device APIs are available
+    //
+    function onDeviceReady(){
+    	manager = new FileDataManager();
+    	manager.getFile();
+    }
+
+    </script>
+  </head>
+  <body>
+    <h1>Example</h1>
+    <p>File System</p>
+    <div><a href="javascript:void(0)" onclick='manager.downloadFile("http://www.google.fr/images/srpr/logo11w.png")'>Récupérer les images</a></div>
+    <div><a href="javascript:void(0)" onclick='manager.createFolder()'>Creer le folder</a></div>
+  </body>
+</html>
